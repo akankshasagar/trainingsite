@@ -1,3 +1,7 @@
+.logo {
+    padding-left: 5vh;
+}
+
 .example-spacer {
     flex: 1 1 auto;
 }
@@ -8,4 +12,91 @@
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.content {
+    padding-left: 3vh;
+    padding-top: 3vh;
+}
+
+.matcard {
+    padding-left: 3vh;
+    width: 55vh;
+    flex: 1 1 auto;
+    border: 2px solid #99738E;
+    /*e0e0e0*/
+    position: absolute;
+    right: 20px;
+    /* border-radius: 8px; */
+}
+
+.btn {
+    width: 20vh;
+    margin-right: 3vh;
+    background-color: #F64C72;
+}
+
+.mattoolbar {
+    background-color: #008080;       /*rgb(39, 38, 38);*/
+    border-bottom: 1px solid #8c85ff;
+    color: #ddd;
+}
+
+.sidenavtopic {
+    font-family: 'Times New Roman', sans-serif;
+    width: 30vh;
+    /* font-style: italic; */
+    padding-bottom: 3vh;
+    padding-top: 3vh;
+    padding-left: 5vh;
+    padding-right: 3vh;
+    font-size: 18px;
+    /* font-weight: bold; */
+    color: #ddd;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.sidenavtopic:hover {
+    cursor: pointer;
+    color: #8c85ff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #2c3e50;
+}
+
+.sidenavtopic:active {
+    transform: scale(0.9);
+    background-color: #1a242f;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sidenavtopic.active {
+    background-color: #1a242f;
+    border: 2px solid #ffcc00;
+    transform: scale(0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #ffcc00;
+    font-family: 'Courier New', monospace;
+    padding-right: 3vh;
+}
+
+.sidenavtopic[disabled] {
+    opacity: 0.5;
+    /* Reduce opacity for disabled divs */
+    cursor: not-allowed;
+    /* Change cursor for disabled divs */
+}
+
+.sidenav {
+    background-color: rgb(39, 38, 38);
+}
+
+.divider {
+    background-color: #8c85ff;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 16px;
 }

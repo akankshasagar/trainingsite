@@ -1,15 +1,65 @@
 <!-- <p>homepage works!</p> -->
 
-<mat-toolbar>  
-  <span>Training</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+<mat-toolbar class="mattoolbar">
+  <!-- <img src="assets/logo.jpg" alt="Logo" class="logo"> -->
+  <span class="logo"><mat-icon>school</mat-icon>Training</span>
+  <span class="example-spacer spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon icon-button" aria-label="Menu" (click)="opened=!opened">
     <mat-icon>menu</mat-icon>
   </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <button mat-icon-button class="example-icon icon-button" aria-label="Account" (click)="toggleCard()">
     <mat-icon>account_circle</mat-icon>
   </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+  <!-- <button mat-icon-button class="example-icon icon-button" aria-label="Toggle Dark Mode">
     <mat-icon>brightness_high</mat-icon>
-  </button>
+  </button> -->
 </mat-toolbar>
+
+<mat-sidenav-container style="height: 90vh;" class="container">
+  <mat-sidenav [(opened)]="opened" #sidenav mode="side" class="sidenav">
+    <!-- <mat-card class="matcard" *ngIf="isCardVisible">
+      <mat-card-content>
+        <section>
+          <div class="example-button-row">
+            <button mat-button class="btn">Login</button>
+            <button mat-button class="btn">Register</button>
+          </div>
+        </section>
+      </mat-card-content>
+    </mat-card> -->
+    <div class="example-button-row sidenavtopic" [routerLink]="['ai']" routerLinkActive="active"
+      (click)="setFirstDivClicked()" [class.active]="isFirstDivClicked">
+      <a>Artificial Intelligence</a>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <div class="example-button-row sidenavtopic"
+      [class.active]="isFirstDivClicked" [attr.disabled]="!isFirstDivClicked"> <!-- [routerLink]="['topic2']" -->
+      <a>Topic 2</a>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <div class="example-button-row sidenavtopic" [class.active]="isFirstDivClicked" [attr.disabled]="!isFirstDivClicked">
+      <a>Topic 3</a>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <div class="example-button-row sidenavtopic" [class.active]="isFirstDivClicked" [attr.disabled]="!isFirstDivClicked">
+      <a>Topic 4</a>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <div class="example-button-row sidenavtopic">
+      <a>Topic 5</a>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <div class="example-button-row sidenavtopic">
+      <a>Topic 6</a>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+    <div class="loader-overlay" *ngIf="isLoading">
+      <div class="loader">
+        <mat-spinner></mat-spinner>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
