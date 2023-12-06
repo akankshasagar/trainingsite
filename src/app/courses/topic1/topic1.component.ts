@@ -17,9 +17,18 @@ import { RouterModule } from '@angular/router';
 export class Topic1Component {
 
   isLoading = true;
+  showForm: boolean = false;
+
   ngOnInit() {
     setTimeout(() => {
       this.isLoading = false; // Set to false when loading is complete
     }, 2000);
   }
+
+  takeTest(): void {
+    setTimeout(() => {
+      this.showForm = true;
+    }, 2000); // Adjust the delay as needed
+  }
+
 }

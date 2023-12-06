@@ -5,7 +5,7 @@
     </div>
 </div>
 
-<button class="button-24" role="button" style="margin-left: 145vh; margin-top: 5vh;">Take the Test!</button>
+<button class="button-24" role="button" style="margin-left: 145vh; margin-top: 5vh;" (click)="takeTest()">Take the Test!</button>
 <br>
 
 <iframe
@@ -13,3 +13,39 @@
     width="900" height="500" style="margin-left: 5vh; border-color: #1d1b31; margin-top: -7vh;"></iframe>
 <br>
 <!-- HTML !-->
+<form *ngIf="showForm">
+    <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+
+        <!-- Radio Buttons -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br>
+
+        <!-- Checkbox -->
+        <input type="checkbox" id="subscribe" name="subscribe" value="subscribe">
+        <label for="subscribe">Subscribe to newsletter</label>
+        <br>
+
+        <!-- Textarea -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+        <br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+</form>
