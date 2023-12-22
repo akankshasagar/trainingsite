@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-topic1',
@@ -19,16 +19,22 @@ export class Topic1Component {
   isLoading = true;
   showForm: boolean = false;
 
+  constructor(private router: Router) {}
+
   ngOnInit() {
     setTimeout(() => {
       this.isLoading = false; // Set to false when loading is complete
-    }, 2000);
+    }, 200); //2000
   }
 
-  takeTest(): void {
-    setTimeout(() => {
-      this.showForm = true;
-    }, 2000); // Adjust the delay as needed
+  navigateToQuiz() {
+    window.open('/courses/topic1/onlinetest1', '_blank');
   }
+
+  // takeTest(): void {
+  //   setTimeout(() => {
+  //     this.showForm = true;
+  //   }, 2000);
+  // }
 
 }

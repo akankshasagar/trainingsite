@@ -1,2 +1,35 @@
 <!-- <p style="align-items: center; margin-left: 10vh; margin-top: 10vh;">topic2 works!</p> -->
-<div class="box"></div>
+<!-- <div class="box"></div> -->
+<button onclick="openForm()">Open Form</button>
+
+<div id="popup-container">
+  <div id="close-btn" onclick="closeForm()">X</div>
+  <!-- <h2>Popup Form</h2>
+    <form>    
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <input type="submit" value="Submit">
+    </form> -->
+
+  <!-- quiz-form.component.html -->
+
+<form (ngSubmit)="submitForm()">
+  <div *ngFor="let question of questions" class="question">
+    <mat-form-field>
+      <mat-label>{{ question.text }}</mat-label>
+      <mat-radio-group [(ngModel)]="question.selectedOption">
+        <mat-radio-button *ngFor="let option of question.options" [value]="option">
+          {{ option }}
+        </mat-radio-button>
+      </mat-radio-group>
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+
+</div>
