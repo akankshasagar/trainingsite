@@ -24,6 +24,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { IntroductionToCybersecurityComponent } from './courses/cs001/introduction-to-cybersecurity/introduction-to-cybersecurity.component';
+import { TypesOfFraudsComponent } from './courses/cs001/types-of-frauds/types-of-frauds.component';
+import { WaysToAvoidScamsComponent } from './courses/cs001/ways-to-avoid-scams/ways-to-avoid-scams.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { IntroductionToCybersecurityComponent } from './courses/cs001/introducti
     SignupComponent,
     CS001Component,
     DashboardComponent,
-    IntroductionToCybersecurityComponent
+    IntroductionToCybersecurityComponent,
+    TypesOfFraudsComponent,
+    WaysToAvoidScamsComponent
   ],
   imports: [
     BrowserModule,
