@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { UserstoreService } from 'src/app/services/userstore.service';
 
 @Component({
   selector: 'app-cs001',
@@ -20,8 +21,15 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class CS001Component {
   drawerState = 'closed';
+  public fullName: string = "";
 
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService, private userStore: UserstoreService) { 
+    this.userStore.getFullNameFromStore()
+      .subscribe(val => {
+        let fullNameFromToken = this.auth.getFullNameFromToken();
+        this.fullName = val || fullNameFromToken
+      })
+  }
 
   toggleDrawer() {
     this.drawerState = this.drawerState === 'closed' ? 'open' : 'closed';

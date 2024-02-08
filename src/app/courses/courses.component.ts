@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { UserstoreService } from '../services/userstore.service';
 
 @Component({
   selector: 'app-courses',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class CoursesComponent {
 
+  constructor(private auth: AuthService){}
+
+  logout(){
+    this.auth.signOut();
+  }
 }

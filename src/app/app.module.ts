@@ -26,6 +26,8 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
 import { IntroductionToCybersecurityComponent } from './courses/cs001/introduction-to-cybersecurity/introduction-to-cybersecurity.component';
 import { TypesOfFraudsComponent } from './courses/cs001/types-of-frauds/types-of-frauds.component';
 import { WaysToAvoidScamsComponent } from './courses/cs001/ways-to-avoid-scams/ways-to-avoid-scams.component';
+import { Testioc01Component } from './courses/cs001/introduction-to-cybersecurity/testioc01/testioc01.component';
+import { AllcoursesComponent } from './allcourses/allcourses.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { WaysToAvoidScamsComponent } from './courses/cs001/ways-to-avoid-scams/w
     DashboardComponent,
     IntroductionToCybersecurityComponent,
     TypesOfFraudsComponent,
-    WaysToAvoidScamsComponent
+    WaysToAvoidScamsComponent,
+    Testioc01Component,
+    AllcoursesComponent
   ],
   imports: [
     BrowserModule,
