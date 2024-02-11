@@ -20,88 +20,24 @@ export class Testioc01Component {
     q2: '',
     q3: '',
     q4: '',
-    q5: ''
+    q5: '',
   };
 
-  constructor(private http: HttpClient, private auth: AuthService) { 
-    // const loggedInUser = this.auth.isLoggedIn();
-    // if(loggedInUser) {
-    //   this.model.email = loggedInUser.email;
-    // }
+  constructor(private http: HttpClient, private auth: AuthService, private toastr: ToastrService) {     
   }
 
-  // submitForm() {
-  //   // Assuming your model is properly populated with user selections
-  //   console.log('Submitting form:', this.model);
-  //   this.auth.submitForm(this.model).subscribe({
-  //     next: (response) => {
-  //       console.log('Submission successful:', response);
-  //     },
-  //     error: (error) => {
-  //       console.error('Error submitting form:', error);
-  //     }
-  //   });
-  // }
-
-  submitForm() {
-    console.log('Submitting form:', this.model);  //Data getting passed
-    this.http.post('https://localhost:7243/api/TestAnswers01', this.model)
-      .subscribe({ next: (response) => {
-        console.log('Form submitted successfully', response);
-      }, error: (error) => {
+  submitForm() { //working
+    // Assuming your model is properly populated with user selections
+    console.log('Submitting form:', this.model);
+    this.auth.submitForm(this.model).subscribe({
+      next: (response) => {
+        console.log('Submission successful:', response);   
+        this.toastr.success(response.message);     
+      },
+      error: (error) => {
         console.error('Error submitting form:', error);
+        // this.toastr.error(error.message);
       }
     });
   }
-
-
-//   submitForm(): void {
-//     console.log('Submitting form:', this.model);
-//     this.auth.submitForm2(this.model);
-// }
-
-
-
-  // formData: any = {
-  //   email: '',
-  //   q1: '',
-  //   q2: '',
-  //   q3: '',
-  //   q4: '',
-  //   q5: ''
-  // };
-
-  // constructor(private authService: AuthService, private formService: FormanswersService) { 
-  //   this.fetchUserEmail();
-  // }
-
-  // fetchUserEmail() {
-  //   // Call your authentication service to fetch user details
-  //   const user = this.authService.getEmailFromToken();
-  //   if (user && user.email) {
-  //     this.formData.email = user.email; // Populate email field with user's email
-  //   }
-  // }
-
-  // submitForm() {
-  //   this.formService.submitForm(this.formData)
-  //     .subscribe(
-  //       response => {
-  //         console.log('Form submitted successfully', response);
-  //         // Optionally, reset the form data here
-  //         this.formData = {
-  //           email: '',
-  //           q1: '',
-  //           q2: '',
-  //           q3: '',
-  //           q4: '',
-  //           q5: ''
-  //         };
-  //       },
-  //       error => {
-  //         console.error('Error submitting form', error);
-  //         // Handle error as needed
-  //       }
-  //     );
-  //     }
 }

@@ -56,7 +56,7 @@ import { AllcoursesComponent } from './allcourses/allcourses.component';
     CommonModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      timeOut: 2000,
+      timeOut: 3000,
       // toastClass: 'toast toast-bootstrap-compatibility-fix'           
     }),
     MatIconModule,
