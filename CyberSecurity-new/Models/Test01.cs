@@ -18,6 +18,6 @@ namespace CyberSecurity_new.Models
         public string Q4 { get; set; }
 
         public string Q5 { get; set; }
-
+        public int Marks { get; internal set; }
     }
 }
