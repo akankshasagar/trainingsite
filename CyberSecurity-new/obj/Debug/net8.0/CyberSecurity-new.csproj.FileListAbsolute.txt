@@ -64,3 +64,4 @@ C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Deb
 C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\CyberSecurity-new.pdb
 C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\CyberSecurity-new.genruntimeconfig.cache
 C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\ref\CyberSecurity-new.dll
+C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\CyberSecurity-new.sourcelink.json
