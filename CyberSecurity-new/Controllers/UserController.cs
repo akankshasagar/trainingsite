@@ -79,8 +79,8 @@ namespace CyberSecurity_new.Controllers
 
             var user = await _authContext.Users.FirstOrDefaultAsync(x => x.Email == userObj.Email);
 
-            if (user == null)
-                return NotFound(new { Message = "User Not Found" });
+            if (user == null )
+                return BadRequest(new { Message = "User Not Found" });
 
             if (!PasswordHasher.VerifyPassword(userObj.Password, user.Password))
             {
@@ -92,6 +92,33 @@ namespace CyberSecurity_new.Controllers
                 Token = CreateJwtToken(user),
                 Message = "Login Success"
             });
+        }
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> DeleteColumnForEmail(string email)
+        {
+            // Find the user by email
+            var user = await _authContext.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (user == null)
+            {
+                return BadRequest(new { Message = "User not found" });
+            }
+
+            // Update the specific column to null or default value
+            // Replace "SpecificColumn" with the name of the column you want to update
+            user.Password = null; // or assign to a default value
+
+            // Save changes to the database
+            try
+            {
+                await _authContext.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                return StatusCode(500, "Failed to update user");
+            }
+
+            return Ok(new { Message = "Column deleted successfully" });
         }
 
         private bool IsEmailValid(string email)

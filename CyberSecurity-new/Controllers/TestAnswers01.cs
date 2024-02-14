@@ -1,5 +1,6 @@
 ﻿using CyberSecurity_new.Context;
 using CyberSecurity_new.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient.Server;
@@ -22,6 +23,7 @@ namespace CyberSecurity_new.Controllers
         [HttpPost]
         public async Task<IActionResult> SubmitForm([FromBody] Test01 submission)
         {
+            int marks = CalculateMarks(submission);
 
             if (submission == null)
             {
@@ -38,10 +40,9 @@ namespace CyberSecurity_new.Controllers
             var existingSubmission = await _authContext.Test01.FirstOrDefaultAsync(s => s.Email == userEmail);
             if (existingSubmission != null)
             {
-                return BadRequest( new { Message = "You have already submitted the form" });
+                return BadRequest( new { Message = $"You Already submitted the form You Scored: {existingSubmission.Marks} out of 5" });
             }
-
-            int marks = CalculateMarks(submission);
+            
 
             // Set the user's email to the submission object
             submission.Email = userEmail;
@@ -51,7 +52,7 @@ namespace CyberSecurity_new.Controllers
             // Save the submission to the database
             _authContext.Test01.Add(submission);
             await _authContext.SaveChangesAsync();
-            return Ok(new {Message = $"Your marks: {marks}" });
+            return Ok(new {Message = $"You Scored: {marks}" });
         }
 
         private int CalculateMarks(Test01 submission)
@@ -59,7 +60,7 @@ namespace CyberSecurity_new.Controllers
             int marks = 0;
 
             Dictionary<string, string> correctAnswers = new Dictionary<string, string>
-    {
+            {
                 { "Q1", "b" },
                 { "Q2", "b" },
                 { "Q3", "b" },
@@ -96,6 +97,36 @@ namespace CyberSecurity_new.Controllers
 
 
         }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<ActionResult<Test01>> GetAllResponses()
+        {
+            var userEmail = User.FindFirst(ClaimTypes.Email)?.Value;
+
+            var userResponses = await _authContext.Test01
+                                         .Where(response => response.Email == userEmail)
+                                         .ToListAsync();
+
+            return Ok(userResponses);
+        }
+
+        /*[HttpGet("test01")]
+        [Authorize]*/
+        [HttpPost("test01")]
+        [Authorize]
+        public async Task<ActionResult<bool>> CheckEmailExists()
+        {
+
+            var userEmail = User.FindFirst(ClaimTypes.Email)?.Value;
+            var emailExists = await _authContext.Test01.AnyAsync(e => e.Email == userEmail);
+            if (!emailExists)
+            {
+                return BadRequest(new { Message = "Please Give the Test" });
+            }
+            return Ok(new { Message = "You have given the test" });
+        }
+        
     }
 
 }
