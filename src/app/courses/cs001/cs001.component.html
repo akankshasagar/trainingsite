@@ -1,115 +1,10 @@
-<!-- <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bxl-c-plus-plus icon'></i>
-        <div class="logo_name">CodingLab</div>
-        <i class='bx bx-menu' id="btn" ></i>
-    </div>
-    <ul class="nav-list">
-      <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search...">
-         <span class="tooltip">Search</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-         <span class="tooltip">Dashboard</span>
-      </li>
-      <li>
-       <a href="#">
-         <i class='bx bx-user' ></i>
-         <span class="links_name">User</span>
-       </a>
-       <span class="tooltip">User</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-chat' ></i>
-         <span class="links_name">Messages</span>
-       </a>
-       <span class="tooltip">Messages</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-pie-chart-alt-2' ></i>
-         <span class="links_name">Analytics</span>
-       </a>
-       <span class="tooltip">Analytics</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-folder' ></i>
-         <span class="links_name">File Manager</span>
-       </a>
-       <span class="tooltip">Files</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-cart-alt' ></i>
-         <span class="links_name">Order</span>
-       </a>
-       <span class="tooltip">Order</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-heart' ></i>
-         <span class="links_name">Saved</span>
-       </a>
-       <span class="tooltip">Saved</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-cog' ></i>
-         <span class="links_name">Setting</span>
-       </a>
-       <span class="tooltip">Setting</span>
-     </li>
-     <li class="profile">
-         <div class="profile-details">
-           <img src="profile.jpg" alt="profileImg">
-           <div class="name_job">
-             <div class="name">Prem Shahi</div>
-             <div class="job">Web designer</div>
-           </div>
-         </div>
-         <i class='bx bx-log-out' id="log_out" ></i>
-     </li>
-    </ul>
-  </div>
-  <section class="home-section">
-      <div class="text">Dashboard</div>
-  </section>
-   -->
-
 <!-- Navbar Start -->
 <nav
   class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
   <a class="navbar-brand d-flex align-items-center px-4 px-lg-5">
     <h2 class="m-0"><i class="fa fa-solid fa-bars" (click)="drawer.toggle()"
         style="cursor: pointer; font-size: 30px;"></i> eLEARNING</h2>
-  </a>
-  <!-- <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
-    data-bs-target="#navbarCollapse">
-    <span class="navbar-toggler-icon"></span>
-  </button> -->
-  <!-- <div class="collapse navbar-collapse" id="navbarCollapse"> -->
-    <!-- <div class="navbar-nav ms-auto p-4 p-lg-0"> -->
-      <!-- <a class="nav-item nav-link" href="homepage">Home</a> -->
-      <!-- <a class="nav-item nav-link">About</a> -->
-      <!-- <a class="nav-item nav-link active" href="courses">Courses</a> -->
-      <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
-      <!-- <a (click)="logout()" class="nav-item nav-link">Logout<i class="fa fa-sign-out ms-3"></i></a> -->
-      <!-- <section>
-        <div class="example-button-row">
-          <button (click)="logout()" mat-raised-button>Logout<i
-              class="fa fa-sign-out ms-3"></i></button>
-        </div>
-      </section> -->
-    <!-- </div> -->
-
-  <!-- </div> -->
+  </a>  
 </nav>
 <!-- Navbar End -->
 
@@ -125,14 +20,14 @@
           <span class="tooltip">Introduction to CyberSecurity</span>
         </li>
         <li>
-          <a [routerLink]="['types-of-frauds']">
+          <a (click)="CheckTest01('')" style="cursor: pointer;"> <!--[routerLink]="canNavigateToTypesOfFrauds ? ['types-of-frauds'] : null"-->
             <i class='bx bx-task'></i>
             <span class="links_name">Types of Scams/Frauds</span>
           </a>
           <span class="tooltip">Types of Scams/Frauds</span>
         </li>
         <li>
-          <a [routerLink]="['ways-to-avoid-scams']">
+          <a [routerLink]="['ways-to-avoid-scams']"> <!--[routerLink]="canNavigateToWaysToAvoidScams ? ['ways-to-avoid-scams'] : null"-->
             <i class='bx bx-task'></i>
             <span class="links_name">Ways to Avoid Scams</span>
           </a>

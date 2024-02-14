@@ -12,7 +12,7 @@
 		<div class="navbar-nav ms-auto p-4 p-lg-0">
 			<a class="nav-item nav-link" href="homepage">Home</a>
 			<!-- <a class="nav-item nav-link">About</a> -->
-			<a class="nav-item nav-link" href="courses">Courses</a>
+			<a class="nav-item nav-link" href="allcourses">Courses</a>
 			<!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
 		</div>
 		<a href="homepage/signin"
@@ -75,7 +75,7 @@
 								*ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required', 'password')">*Password
 								is required</small>
 
-							<div class="text"><a href="#">Forgot password?</a></div>
+							<!-- <div class="text"><a href="#">Forgot password?</a></div> -->
 							<div class="button input-box">
 								<input type="submit" (click)="onSignup()" value="Sumbit">
 							</div>

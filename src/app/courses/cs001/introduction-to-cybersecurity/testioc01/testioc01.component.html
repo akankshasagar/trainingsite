@@ -67,8 +67,30 @@
                             <label for="q5d"> Social media influencers </label><br>
                         </li>
                     </ol>
-                    <button type="submit" (click)="submitForm()">Submit Answers</button>
+                    <button type="submit" (click)="Start()" >Submit Answers</button> <!--(click)="submitForm()"-->
                 </form>
+            </div>
+            <a *ngIf="submitted" class="btn btn-primary py-3 px-5 mt-2" href="courses/cs001/types-of-frauds">Go to the Next Chapter!</a>
+        </div>
+    </div>
+</div>
+
+<div class="container-xxl py-5 justify-content-center align-items-center modal-open" *ngIf="start"> <!-- *ngIf="start"-->
+    <div class="container">
+        <div class="card shadow confirmation-card">
+            <div class="row g-5">                
+                <div class="col-lg-6 wow" >
+                    <div class="card-body">                        
+                        <!-- Confirmation Card -->
+                        <div class="confirmation-card confirmation-buttons">
+                            <p class="confirmation-text">Are you sure you want to submit?</p>
+                            <button class="btn btn-primary" (click)="submitForm()">Yes</button> <!--(click)="submitEnrollment()"-->
+                            <button class="btn btn-secondary" (click)="closeCard()">Cancel</button> <!-- (click)="cancelEnrollment()"-->
+                        </div>
+                        <!-- End Confirmation Card -->
+                        <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3" aria-label="Close" (click)="closeCard()"></button> <!--(click)="closeCard()"-->
+                    </div>
+                </div>
             </div>
         </div>
     </div>

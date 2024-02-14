@@ -11,6 +11,9 @@ export class AuthService {
 
   private baseUrl:string = "https://localhost:7243/api/User/";
   private ansapiurl: string = "https://localhost:7243/api/TestAnswers01";
+  private courseurl: string = "https://localhost:7243/api/CourseEnrollments";
+  private coursecompl: string = "https://localhost:7243/api/CoursesCompleted";
+  // private test01: string = ""
   private userPayload: any;
 
   constructor(private http: HttpClient, private router: Router){
@@ -61,5 +64,17 @@ export class AuthService {
 
   submitForm(formData: any): Observable<any> {
     return this.http.post(`${this.ansapiurl}`, formData);
+  }
+
+  enroll(email: string, course: string){
+    return this.http.post<any>(`${this.courseurl}?email= ${email.toString()}&course=${course.toString()}`, {email, course});
+  }
+
+  complete(email: string, course: string){
+    return this.http.post<any>(`${this.coursecompl}?email= ${email.toString()}&course=${course.toString()}`, {email, course});
+  }
+
+  test01(email: string){
+    return this.http.post<any>(`${this.ansapiurl}/test01?email= ${email.toString()}`, {email});
   }
 }

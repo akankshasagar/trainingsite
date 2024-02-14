@@ -14,6 +14,8 @@ import { UserstoreService } from 'src/app/services/userstore.service';
 })
 export class Testioc01Component {
 
+  submitted: boolean = false;
+  start: boolean = false;
   model: any = {
     email: '', // Initialize model properties
     q1: '',
@@ -23,21 +25,33 @@ export class Testioc01Component {
     q5: '',
   };
 
-  constructor(private http: HttpClient, private auth: AuthService, private toastr: ToastrService) {     
+  constructor(private http: HttpClient, private auth: AuthService, private toastr: ToastrService, private router: Router) {     
+    this.submitted = localStorage.getItem('formSubmitted') === 'true';
   }
 
   submitForm() { //working
     // Assuming your model is properly populated with user selections
-    console.log('Submitting form:', this.model);
+    // console.log('Submitting form:', this.model);
+    this.submitted = true;
+    this.start = false;
+    localStorage.setItem('formSubmitted', 'true'); 
     this.auth.submitForm(this.model).subscribe({
       next: (response) => {
-        console.log('Submission successful:', response);   
-        this.toastr.success(response.message);     
+        // console.log('Submission successful:', response);   
+        this.toastr.success(response.message);                
       },
       error: (error) => {
-        console.error('Error submitting form:', error);
-        // this.toastr.error(error.message);
+        // console.error('Error submitting form:', error);
+        this.toastr.error(error?.error.message);      
       }
     });
+  }
+
+  Start(){
+    this.start = true;
+  }
+
+  closeCard() {
+    this.start = false;
   }
 }
