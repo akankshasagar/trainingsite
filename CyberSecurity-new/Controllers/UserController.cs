@@ -31,11 +31,11 @@ namespace CyberSecurity_new.Controllers
         {
             StringBuilder sb = new StringBuilder();
             if (password.Length < 8)
-                sb.Append("Minimum password length should be 8" + Environment.NewLine);
+                sb.Append("Minimum password length should be 8\n" + Environment.NewLine);
             if (!(Regex.IsMatch(password, "[a-z]") && Regex.IsMatch(password, "[A-Z]") && Regex.IsMatch(password, "[0-9]")))
-                sb.Append("Password should be Alphanumeric" + Environment.NewLine);
+                sb.Append("Password should be Alphanumeric\n" + Environment.NewLine);
             if (!Regex.IsMatch(password, "[<,>,@,!,#,$,%,^,&,*,(,),-,_,+,=,`,~,\\[,\\],{,},.,/,|,;,:,?,']"))
-                sb.Append("Password should contain special characters" + Environment.NewLine);
+                sb.Append("Password should contain special characters\n" + Environment.NewLine);
 
             return sb.ToString();
         }
@@ -90,15 +90,15 @@ namespace CyberSecurity_new.Controllers
             return Ok(new
             {
                 Token = CreateJwtToken(user),
-                Message = "Login Success"
+                Message = $"Welcome, {user.Name}"
             });
         }
 
         [HttpPost("forgot-password")]
-        public async Task<IActionResult> DeleteColumnForEmail(string email)
+        public async Task<IActionResult> DeleteColumnForEmail([FromBody] User userObj)
         {
             // Find the user by email
-            var user = await _authContext.Users.FirstOrDefaultAsync(u => u.Email == email);
+            var user = await _authContext.Users.FirstOrDefaultAsync(u => u.Email == userObj.Email);
             if (user == null)
             {
                 return BadRequest(new { Message = "User not found" });
@@ -106,7 +106,10 @@ namespace CyberSecurity_new.Controllers
 
             // Update the specific column to null or default value
             // Replace "SpecificColumn" with the name of the column you want to update
-            user.Password = null; // or assign to a default value
+            var pass = CheckPasswordStrength(userObj.Password);
+            if (!string.IsNullOrEmpty(pass))
+                return BadRequest(new { Message = pass.ToString() });
+            user.Password = PasswordHasher.HashPassword(userObj.Password); // or assign to a default value
 
             // Save changes to the database
             try
@@ -118,7 +121,7 @@ namespace CyberSecurity_new.Controllers
                 return StatusCode(500, "Failed to update user");
             }
 
-            return Ok(new { Message = "Column deleted successfully" });
+            return Ok(new { Message = "Password Updated Successfully" });
         }
 
         private bool IsEmailValid(string email)
