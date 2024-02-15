@@ -16,6 +16,10 @@ export class SigninComponent {
 
   loginForm!: FormGroup;
   signupForm!: FormGroup;
+  forgotPassword!: FormGroup;
+  start: boolean = false;
+  showPassword: boolean = false;
+  forshowPassword: boolean = false;
 
   hide = true;
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private toastr: ToastrService, private userStore: UserstoreService) {
@@ -24,31 +28,44 @@ export class SigninComponent {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
-    })     
+    });
+    this.forgotPassword = this.fb.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required]
+    });
   }
 
-  // onSignup(){
-  //   if(this.signupForm.valid){
-  //     console.log(this.signupForm.value);
-  //     this.auth.signUp(this.signupForm.value)
-  //     .subscribe({
-  //       next:(res => {
-  //         this.toast.success(res.message);
-  //         // alert(res.message);
-  //         this.signupForm.reset();
-  //       })
-  //       ,error:(err => {
-  //         this.toast.error(err?.error.message);
-  //         // alert(err?.error.message)
-  //       })
-  //     })
-  //   }
-  //   else{
-  //     ValidateForm.validateAllFormFields(this.signupForm);
-  //     // alert("Your Form is invalid");
-  //     this.toast.error({detail:"ERROR", summary: "FORM IS INVALID"});
-  //   }
-  // }
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
+
+  togglePasswordVisibilityfor(){
+    this.forshowPassword = !this.forshowPassword;
+  }
+  
+  onSubmit(){
+    if(this.forgotPassword.valid){
+      // console.log(this.signupForm.value);
+      this.auth.forgot(this.forgotPassword.value)
+      .subscribe({
+        next:(res => {
+          this.toastr.success(res.message);
+          // alert(res.message);
+          this.forgotPassword.reset();
+          this.router.navigate(['homepage/signin']);
+        })
+        ,error:(err => {
+          this.toastr.error(err?.error.message);
+          // alert(err?.error.message)
+        })
+      })
+    }
+    else{
+      ValidateForm.validateAllFormFields(this.forgotPassword);
+      // alert("Your Form is invalid");
+      this.toastr.error("Your Form is invalid");
+    }
+  }
 
   onLogin() {
     if (this.loginForm.valid) {
@@ -78,5 +95,13 @@ export class SigninComponent {
       // alert("Your form is invalid");
       //throw the error 
     }
+  }
+
+  Start(){
+    this.start = true;
+  }
+
+  closeCard() {
+    this.start = false;
   }
 }

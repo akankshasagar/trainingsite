@@ -18,17 +18,21 @@
   transition: all 0.5s ease;
 }
 .sidebar.open{
-  width: 280px;
+  background: #11101D;
+  width: 300px;
+  /* height: 650px; */
 }
 .sidebar .logo-details{
   height: 60px;
   display: flex;
   align-items: center;
   position: relative;
+  background: #11101D;
 }
 .sidebar .logo-details .icon{
   opacity: 0;
   transition: all 0.5s ease;
+  background: #11101D;
 }
 .sidebar .logo-details .logo_name{
   color: #fff;
@@ -36,10 +40,12 @@
   font-weight: 600;
   opacity: 0;
   transition: all 0.5s ease;
+  background: #11101D;
 }
 .sidebar.open .logo-details .icon,
 .sidebar.open .logo-details .logo_name{
   opacity: 1;
+  background: #11101D;
 }
 .sidebar .logo-details #btn{
   position: absolute;
@@ -52,9 +58,11 @@
   text-align: center;
   cursor: pointer;
   transition: all 0.5s ease;
+  background: #11101D;
 }
 .sidebar.open .logo-details #btn{
   text-align: right;
+  background: #11101D;
 }
 .sidebar i{
   color: #fff;
@@ -62,17 +70,20 @@
   min-width: 50px;
   font-size: 28px;
   text-align: center;
-  line-height: 60px;
+  line-height: 60px;  
 }
 .sidebar .nav-list{
   margin-top: 20px;
   /* height: 100px; */
   margin-left: -6vh;
+  background: #11101D;
+  width: 300px;
 }
 .sidebar li{
   position: relative;
   margin: 8px 0;
   list-style: none;
+  background: #11101D;
 }
 .sidebar li .tooltip{
   position: absolute;
@@ -96,6 +107,7 @@
   transition: all 0.4s ease;
   top: 50%;
   transform: translateY(-50%);
+  background: #11101D;
 }
 .sidebar.open li .tooltip{
   display: none;
@@ -116,6 +128,7 @@
 .sidebar.open input{
   padding: 0 20px 0 50px;
   width: 100%;
+  background: #11101D;
 }
 .sidebar .bx-search{
   position: absolute;
@@ -156,11 +169,31 @@
   pointer-events: none;
   transition: 0.4s;
 }
+.sidebar li a .links_name2{
+  color: #fff;  
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  cursor: pointer;
+}
 .sidebar.open li a .links_name{
   opacity: 1;
   pointer-events: auto;
 }
+.sidebar.open li a .links_name2{
+  opacity: 1;
+  pointer-events: auto;
+}
 .sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #11101D;
+}
+.sidebar li a:hover .links_name2,
 .sidebar li a:hover i{
   transition: all 0.5s ease;
   color: #11101D;
@@ -183,7 +216,7 @@
   overflow: hidden;
 }
 .sidebar.open li.profile{
-  width: 280px;
+  width: 300px;
 }
 .sidebar li .profile-details{
   display: flex;

@@ -9,9 +9,49 @@
 <!-- Navbar End -->
 
 <mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened #drawer>
-    <div class="sidebar open">
-      <ul class="nav-list">        
+  <mat-drawer mode="side" opened #drawer>    
+    <div class="sidebar open">      
+      <ul class="nav-list">
+        <li (click)="toggleChapter1Topics()">
+          <a>
+            <i class="bx bx-task"></i>
+            <span class="links_name2">Information Security & CIA Triad</span>            
+            <i class="bx bx-chevron-down" [class.bx-chevron-up]="showChapter1Topics" [class.bx-chevron-down]="!showChapter1Topics"></i> <!--style="margin-left: 15vh;"-->
+          </a>
+          <span class="tooltip">Information Security & CIA Triad</span>
+          <ul *ngIf="showChapter1Topics">
+            <li>
+              <a [routerLink]="['information-security']">
+                <i class='bx bx-task'></i>
+                <span class="links_name2">Information Security</span>
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['cia-triad']">
+                <i class="bx bx-task"></i>
+                <span class="links_name2">CIA Triad</span>                
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['cyber-threat']">
+                <i class="bx bx-task"></i>
+                <span class="links_name2">Threat, Vulnerability & Risk: Threat</span>                
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['cyber-vulnerability']">
+                <i class="bx bx-task"></i>
+                <span class="links_name2">Threat, Vulnerability & Risk: Vulnerability</span>                
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['cyber-vulnerability']">
+                <i class="bx bx-task"></i>
+                <span class="links_name2">Threat, Vulnerability & Risk: Risk</span>                
+              </a>
+            </li>
+          </ul>
+        </li>        
         <li>
           <a [routerLink]="['introduction-to-cybersecurity']">
             <i class='bx bx-task'></i>
@@ -38,7 +78,7 @@
             <!-- <img src="profile.jpg" alt="profileImg"> -->
             <div class="name_job">
               <div class="name">{{fullName}}</div>
-              <div class="job">LEARNER</div>
+              <div class="job">{{email}}</div>
             </div>
           </div>
           <i class='bx bx-log-out' id="log_out" (click)="logout()"></i>

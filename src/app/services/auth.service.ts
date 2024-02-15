@@ -13,6 +13,7 @@ export class AuthService {
   private ansapiurl: string = "https://localhost:7243/api/TestAnswers01";
   private courseurl: string = "https://localhost:7243/api/CourseEnrollments";
   private coursecompl: string = "https://localhost:7243/api/CoursesCompleted";
+  private forgotpwd: string = "https://localhost:7243/api/User/forgot-password";
   // private test01: string = ""
   private userPayload: any;
 
@@ -26,6 +27,10 @@ export class AuthService {
 
   login(loginObj: any){
     return this.http.post<any>(`${this.baseUrl}authenticate`, loginObj);
+  }
+
+  forgot(userObj: any){
+    return this.http.post<any>(`${this.forgotpwd}`, userObj );
   }
 
   signOut(){

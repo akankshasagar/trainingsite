@@ -18,6 +18,8 @@ export class SignupComponent {
 
   signupForm!: FormGroup;
   hide = true;
+  showPassword: boolean = false;
+  
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private toastr: ToastrService) {
     // this.initializeForms();
     this.signupForm = this.fb.group({
@@ -25,6 +27,10 @@ export class SignupComponent {
       email: ['', Validators.required],
       password: ['', Validators.required]
     })    
+  }
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
   }
 
   onSignup(){

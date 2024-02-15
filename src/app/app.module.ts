@@ -28,6 +28,10 @@ import { TypesOfFraudsComponent } from './courses/cs001/types-of-frauds/types-of
 import { WaysToAvoidScamsComponent } from './courses/cs001/ways-to-avoid-scams/ways-to-avoid-scams.component';
 import { Testioc01Component } from './courses/cs001/introduction-to-cybersecurity/testioc01/testioc01.component';
 import { AllcoursesComponent } from './allcourses/allcourses.component';
+import { InformationSecurityComponent } from './courses/cs001/information-security/information-security.component';
+import { CiaTriadComponent } from './courses/cs001/cia-triad/cia-triad.component';
+import { CyberThreatComponent } from './courses/cs001/cyber-threat/cyber-threat.component';
+import { CyberVulnerabilityComponent } from './courses/cs001/cyber-vulnerability/cyber-vulnerability.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,11 @@ import { AllcoursesComponent } from './allcourses/allcourses.component';
     TypesOfFraudsComponent,
     WaysToAvoidScamsComponent,
     Testioc01Component,
-    AllcoursesComponent
+    AllcoursesComponent,
+    InformationSecurityComponent,
+    CiaTriadComponent,
+    CyberThreatComponent,
+    CyberVulnerabilityComponent
   ],
   imports: [
     BrowserModule,

@@ -24,17 +24,26 @@ import { ToastrService } from 'ngx-toastr';
 export class CS001Component {
   drawerState = 'closed';
   public fullName: string = "";
-  canNavigateToTypesOfFrauds: boolean = false;
-  canNavigateToWaysToAvoidScams: boolean = false;
+  public email: string = "";
+  showChapter1Topics: boolean = false;
 
   constructor(private auth: AuthService, private userStore: UserstoreService, private router: Router, private toastr: ToastrService) { 
     this.userStore.getFullNameFromStore()
       .subscribe(val => {
         let fullNameFromToken = this.auth.getFullNameFromToken();
         this.fullName = val || fullNameFromToken
-      })
+      });
+      this.userStore.getEmailFromStore()
+      .subscribe(val => {
+        let emailFromToken = this.auth.getEmailFromToken();
+        this.email = val || emailFromToken
+      })      
       // this.canNavigateToTypesOfFrauds = true;
       // this.canNavigateToWaysToAvoidScams = true;
+  }
+
+  toggleChapter1Topics() {
+    this.showChapter1Topics = !this.showChapter1Topics;
   }
 
   CheckTest01(email: string) {

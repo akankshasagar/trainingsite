@@ -12,6 +12,10 @@ import { TypesOfFraudsComponent } from './courses/cs001/types-of-frauds/types-of
 import { WaysToAvoidScamsComponent } from './courses/cs001/ways-to-avoid-scams/ways-to-avoid-scams.component';
 import { Testioc01Component } from './courses/cs001/introduction-to-cybersecurity/testioc01/testioc01.component';
 import { AllcoursesComponent } from './allcourses/allcourses.component';
+import { InformationSecurityComponent } from './courses/cs001/information-security/information-security.component';
+import { CiaTriadComponent } from './courses/cs001/cia-triad/cia-triad.component';
+import { CyberThreatComponent } from './courses/cs001/cyber-threat/cyber-threat.component';
+import { CyberVulnerabilityComponent } from './courses/cs001/cyber-vulnerability/cyber-vulnerability.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'homepage'},
@@ -20,7 +24,11 @@ const routes: Routes = [
   { path: 'homepage/signup', component: SignupComponent },
   { path: 'courses', component: CoursesComponent, canActivate:[AuthGuard] },
   { path: 'courses/cs001', component: CS001Component, canActivate:[AuthGuard], children: [
-    { path: '', pathMatch: 'full', redirectTo: 'introduction-to-cybersecurity' },
+    { path: '', pathMatch: 'full', redirectTo: 'information-security' },
+    { path: 'information-security', component: InformationSecurityComponent },
+    { path: 'cia-triad', component: CiaTriadComponent },
+    { path: 'cyber-threat', component: CyberThreatComponent },
+    { path: 'cyber-vulnerability', component: CyberVulnerabilityComponent },
     { path: 'introduction-to-cybersecurity', component: IntroductionToCybersecurityComponent },
     { path: 'types-of-frauds', component: TypesOfFraudsComponent },
     { path: 'ways-to-avoid-scams', component: WaysToAvoidScamsComponent }
