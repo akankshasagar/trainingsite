@@ -11,6 +11,16 @@ export class AuthService {
 
   private baseUrl:string = "https://localhost:7243/api/User/";
   private ansapiurl: string = "https://localhost:7243/api/TestAnswers01";
+
+  private isacttest001: string = "https://localhost:7243/api/IsactAnswers001";
+  private attacksurfacestest001: string = "https://localhost:7243/api/AttackSurfacesAnswers001";
+  private phishingspoofingtest001url: string = "https://localhost:7243/api/PhishingSpoofingAnswer001";
+  private wirelessenvurl: string = "https://localhost:7243/api/WirelessEnvironmentAnswer001";
+  private dosdontsurl: string = "https://localhost:7243/api/DosDontsAnswer001";
+  private irmngmnturl: string = "https://localhost:7243/api/IRMngmntAnswer001";
+  private dataprotecturl: string = "https://localhost:7243/api/DataProtectAnswer001";
+  private dnsapturl: string = "https://localhost:7243/api/DnsAptAnswer001";
+
   private courseurl: string = "https://localhost:7243/api/CourseEnrollments";
   private coursecompl: string = "https://localhost:7243/api/CoursesCompleted";
   private forgotpwd: string = "https://localhost:7243/api/User/forgot-password";
@@ -71,6 +81,38 @@ export class AuthService {
     return this.http.post(`${this.ansapiurl}`, formData);
   }
 
+  isacttestForm(formData: any): Observable<any>{
+    return this.http.post(`${this.isacttest001}`, formData);
+  }
+
+  attacksurfacesTestForm(formData: any): Observable<any>{
+    return this.http.post(`${this.attacksurfacestest001}`, formData);
+  }
+
+  phishingspoofingtestForm(formData: any): Observable<any>{
+    return this.http.post(`${this.phishingspoofingtest001url}`, formData);
+  }
+
+  wirelessenvironmenttestForm(formData: any): Observable<any>{
+    return this.http.post(`${this.wirelessenvurl}`, formData);
+  }
+
+  dosanddontsForm(formData: any): Observable<any>{
+    return this.http.post(`${this.dosdontsurl}`, formData);
+  }
+
+  irmngmntForm(formData: any): Observable<any>{
+    return this.http.post(`${this.irmngmnturl}`, formData);
+  }
+
+  dataprotectForm(formData: any): Observable<any>{
+    return this.http.post(`${this.dataprotecturl}`, formData);
+  }
+
+  dnsaptForm(formData: any): Observable<any>{
+    return this.http.post(`${this.dnsapturl}`, formData);
+  }
+
   enroll(email: string, course: string){
     return this.http.post<any>(`${this.courseurl}?email= ${email.toString()}&course=${course.toString()}`, {email, course});
   }
@@ -81,5 +123,37 @@ export class AuthService {
 
   test01(email: string){
     return this.http.post<any>(`${this.ansapiurl}/test01?email= ${email.toString()}`, {email});
+  }
+
+  isacttest001check(email: string){
+    return this.http.post<any>(`${this.isacttest001}/isactest001?email= ${email.toString()}`, {email});
+  }
+
+  attackcurfacestest001check(email: string){
+    return this.http.post<any>(`${this.attacksurfacestest001}/attacksurfacestest001?email = ${email.toString()}`, {email});
+  }
+
+  phishingspoofingtest001check(email: string){
+    return this.http.post<any>(`${this.phishingspoofingtest001url}/phishingspoofingtest001?email = ${email.toString()}`, {email});
+  }
+
+  wirelessenvtest001check(email: string){
+    return this.http.post<any>(`${this.wirelessenvurl}/wirelessenvironmenttest001?email= ${email.toString()}`, {email});
+  }
+
+  dosanddontstest001check(email: string){
+    return this.http.post<any>(`${this.dosdontsurl}/dosdontstest001?email= ${email.toString()}`, {email});
+  }
+
+  irmngmnttest001check(email: string){
+    return this.http.post<any>(`${this.irmngmnturl}/irmngmnttest001?email= ${email.toString()}`, {email});
+  }
+
+  dataprotecttest001check(email: string){
+    return this.http.post<any>(`${this.dataprotecturl}/dataprotecttest001?email= ${email.toString()}`, {email});
+  }
+
+  dnsapttest001check(email: string){
+    return this.http.post<any>(`${this.dnsapturl}/dnsapttest001?email= ${email.toString()}`, {email});
   }
 }

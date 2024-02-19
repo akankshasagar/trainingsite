@@ -16,10 +16,12 @@
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
+  padding-bottom: 2vh;  
 }
 .sidebar.open{
-  background: #11101D;
-  width: 300px;
+  /* background: #11101D; */
+  width: 305px;
+  overflow-y: auto;
   /* height: 650px; */
 }
 .sidebar .logo-details{
@@ -27,12 +29,12 @@
   display: flex;
   align-items: center;
   position: relative;
-  background: #11101D;
+  /* background: #11101D; */
 }
 .sidebar .logo-details .icon{
   opacity: 0;
   transition: all 0.5s ease;
-  background: #11101D;
+  /* background: #11101D; */
 }
 .sidebar .logo-details .logo_name{
   color: #fff;
@@ -40,7 +42,7 @@
   font-weight: 600;
   opacity: 0;
   transition: all 0.5s ease;
-  background: #11101D;
+  /* background: #11101D; */
 }
 .sidebar.open .logo-details .icon,
 .sidebar.open .logo-details .logo_name{
@@ -178,7 +180,7 @@
   transition: 0.4s;
   padding-top: 2vh;
   padding-bottom: 2vh;
-  cursor: pointer;
+  cursor: pointer;  
 }
 .sidebar.open li a .links_name{
   opacity: 1;
@@ -186,7 +188,7 @@
 }
 .sidebar.open li a .links_name2{
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: auto;  
 }
 .sidebar li a:hover .links_name,
 .sidebar li a:hover i{
@@ -196,7 +198,7 @@
 .sidebar li a:hover .links_name2,
 .sidebar li a:hover i{
   transition: all 0.5s ease;
-  color: #11101D;
+  color: #11101D;  
 }
 .sidebar li i{
   height: 50px;
@@ -216,7 +218,7 @@
   overflow: hidden;
 }
 .sidebar.open li.profile{
-  width: 300px;
+  width: 305px;
 }
 .sidebar li .profile-details{
   display: flex;
