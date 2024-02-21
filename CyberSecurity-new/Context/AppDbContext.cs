@@ -20,6 +20,7 @@ namespace CyberSecurity_new.Context
         public DbSet<IRMngmntTest001> iRMngmntTest001s { get; set; }
         public DbSet<DataProtectTest001> DataProtectTest001s { get; set; }
         public DbSet<DnsAptTest001> DnsAptTest001s { get; set; }
+        public DbSet<CyberStalkBullyTest001> CyberStalkBullyTest001s { get; set; }
         public DbSet<CourseEnrollment> CourseEnrollments { get; set; }
         public DbSet<CourseCompleted> courseCompleteds { get; set; }
 
@@ -41,6 +42,8 @@ namespace CyberSecurity_new.Context
             modelBuilder.Entity<DataProtectTest001>().ToTable("dataprotectiontest001");
 
             modelBuilder.Entity<DnsAptTest001>().ToTable("dnsapttest001");
+
+            modelBuilder.Entity<CyberStalkBullyTest001>().ToTable("cyberstalkbullytest001");
 
             modelBuilder.Entity<CourseEnrollment>().ToTable("coursesEnrolled");
             modelBuilder.Entity<CourseCompleted>().ToTable("coursesCompleted");

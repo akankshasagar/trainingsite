@@ -36,7 +36,7 @@ namespace CyberSecurity_new.Controllers
 
             if (isCompleted)
             {
-                return BadRequest(new { Message = "Already Marked as Completed." });
+                return Ok(new { Message = "Already Marked as Completed." });
             }
 
             var coursecompleted = new CourseCompleted
@@ -48,7 +48,7 @@ namespace CyberSecurity_new.Controllers
             _authContext.courseCompleteds.Add(coursecompleted);
             await _authContext.SaveChangesAsync();
 
-            return Ok("Marked as Completed");
+            return Ok("Successfully Completed The Course");
 
         }
     }
