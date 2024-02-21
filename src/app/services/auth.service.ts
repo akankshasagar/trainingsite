@@ -20,6 +20,7 @@ export class AuthService {
   private irmngmnturl: string = "https://localhost:7243/api/IRMngmntAnswer001";
   private dataprotecturl: string = "https://localhost:7243/api/DataProtectAnswer001";
   private dnsapturl: string = "https://localhost:7243/api/DnsAptAnswer001";
+  private cyberstalkurl: string = "https://localhost:7243/api/CyberStalkBullyAnswer001";  
 
   private courseurl: string = "https://localhost:7243/api/CourseEnrollments";
   private coursecompl: string = "https://localhost:7243/api/CoursesCompleted";
@@ -113,6 +114,10 @@ export class AuthService {
     return this.http.post(`${this.dnsapturl}`, formData);
   }
 
+  cyberstalkForm(formData: any): Observable<any>{
+    return this.http.post(`${this.cyberstalkurl}`, formData);
+  }
+
   enroll(email: string, course: string){
     return this.http.post<any>(`${this.courseurl}?email= ${email.toString()}&course=${course.toString()}`, {email, course});
   }
@@ -155,5 +160,9 @@ export class AuthService {
 
   dnsapttest001check(email: string){
     return this.http.post<any>(`${this.dnsapturl}/dnsapttest001?email= ${email.toString()}`, {email});
+  }
+
+  cyberstalktest001check(email: string){
+    return this.http.post<any>(`${this.cyberstalkurl}/cyberstalkbullytest001?email= ${email.toString()}`, {email});
   }
 }
