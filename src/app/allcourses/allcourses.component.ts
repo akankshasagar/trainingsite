@@ -15,8 +15,7 @@ export class AllcoursesComponent {
 
   }
 
-  enroll(email: string, course: string) {
-    // this.http.post<any>('https://localhost:7243/api/CourseEnrollments', { course })
+  enroll(email: string, course: string) {   
     this.auth.enroll(email, course)
       .subscribe({
         next: (response)  => {

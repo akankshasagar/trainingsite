@@ -12,7 +12,6 @@ import { CommonModule, NgIf } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CS001Component } from './courses/cs001/cs001.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
@@ -23,10 +22,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { TokenInterceptor } from './interceptors/token.interceptor';
-import { IntroductionToCybersecurityComponent } from './courses/cs001/introduction-to-cybersecurity/introduction-to-cybersecurity.component';
-import { TypesOfFraudsComponent } from './courses/cs001/types-of-frauds/types-of-frauds.component';
-import { WaysToAvoidScamsComponent } from './courses/cs001/ways-to-avoid-scams/ways-to-avoid-scams.component';
-import { Testioc01Component } from './courses/cs001/introduction-to-cybersecurity/testioc01/testioc01.component';
 import { AllcoursesComponent } from './allcourses/allcourses.component';
 import { InformationSecurityComponent } from './courses/cs001/information-security-and-cia-triad/information-security/information-security.component';
 import { CiaTriadComponent } from './courses/cs001/information-security-and-cia-triad/cia-triad/cia-triad.component';
@@ -91,12 +86,7 @@ import { CyberTest001Component } from './courses/cs001/cyberstalking-and-cyberbu
     CoursesComponent,
     SigninComponent,
     SignupComponent,
-    CS001Component,
-    DashboardComponent,
-    IntroductionToCybersecurityComponent,
-    TypesOfFraudsComponent,
-    WaysToAvoidScamsComponent,
-    Testioc01Component,
+    CS001Component,                  
     AllcoursesComponent,
     InformationSecurityComponent,
     CiaTriadComponent,
@@ -166,8 +156,7 @@ import { CyberTest001Component } from './courses/cs001/cyberstalking-and-cyberbu
     CommonModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      timeOut: 3000,
-      // toastClass: 'toast toast-bootstrap-compatibility-fix'           
+      timeOut: 3000,                 
     }),
     MatIconModule,
     MatButtonModule,

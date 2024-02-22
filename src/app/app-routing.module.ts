@@ -5,12 +5,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { SigninComponent } from './homepage/signin/signin.component';
 import { SignupComponent } from './homepage/signup/signup.component';
 import { CS001Component } from './courses/cs001/cs001.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
-import { IntroductionToCybersecurityComponent } from './courses/cs001/introduction-to-cybersecurity/introduction-to-cybersecurity.component';
-import { TypesOfFraudsComponent } from './courses/cs001/types-of-frauds/types-of-frauds.component';
-import { WaysToAvoidScamsComponent } from './courses/cs001/ways-to-avoid-scams/ways-to-avoid-scams.component';
-import { Testioc01Component } from './courses/cs001/introduction-to-cybersecurity/testioc01/testioc01.component';
 import { AllcoursesComponent } from './allcourses/allcourses.component';
 import { InformationSecurityComponent } from './courses/cs001/information-security-and-cia-triad/information-security/information-security.component';
 import { CiaTriadComponent } from './courses/cs001/information-security-and-cia-triad/cia-triad/cia-triad.component';
@@ -49,7 +44,6 @@ import { ManInTheMiddleAttackComponent } from './courses/cs001/dns-and-apt-attac
 import { DdosComponent } from './courses/cs001/cyberstalking-and-cyberbullying/ddos/ddos.component';
 import { CyberstalkingComponent } from './courses/cs001/cyberstalking-and-cyberbullying/cyberstalking/cyberstalking.component';
 import { CyberstalkingCyberbullyingPreventionComponent } from './courses/cs001/cyberstalking-and-cyberbullying/cyberstalking-cyberbullying-prevention/cyberstalking-cyberbullying-prevention.component';
-import { InformationSecurityAndCiaTriadComponent } from './courses/cs001/information-security-and-cia-triad/information-security-and-cia-triad.component';
 import { IsactTest001Component } from './courses/cs001/information-security-and-cia-triad/isact-test001/isact-test001.component';
 import { Attacksurfacestest001Component } from './courses/cs001/attack-surfaces-and-its-types/attacksurfacestest001/attacksurfacestest001.component';
 import { WirelessEnvironmentTest001Component } from './courses/cs001/wireless-environment-scams-and-precautions/wireless-environment-test001/wireless-environment-test001.component';
@@ -149,17 +143,10 @@ const routes: Routes = [
     { path: 'cyberstalking-and-cyberbullying/cyberstalking', component: CyberstalkingComponent },
     // { path: 'cyberbullying', component: CyberbullyingComponent },
     { path: 'cyberstalking-and-cyberbullying/cyberstalking-cyberbullying-prevention', component: CyberstalkingCyberbullyingPreventionComponent },
-    { path: 'cyberstalking-and-cyberbullying/cyber-test001', component: CyberTest001Component },
+    { path: 'cyberstalking-and-cyberbullying/cyber-test001', component: CyberTest001Component }
 
-
-
-
-    { path: 'introduction-to-cybersecurity', component: IntroductionToCybersecurityComponent },
-    { path: 'types-of-frauds', component: TypesOfFraudsComponent },
-    { path: 'ways-to-avoid-scams', component: WaysToAvoidScamsComponent }
-  ] },  
-  { path: 'courses/cs001/introduction-to-cybersecurity/testioc01', component: Testioc01Component },
-  { path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard] },
+    
+  ] },    
   { path: 'allcourses', component: AllcoursesComponent }
 ];
 

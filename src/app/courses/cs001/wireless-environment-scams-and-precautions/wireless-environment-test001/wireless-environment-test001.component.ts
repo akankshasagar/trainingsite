@@ -14,7 +14,7 @@ export class WirelessEnvironmentTest001Component {
   submittedw: boolean = false;
   start: boolean = false;
   model: any = {
-    email: '', // Initialize model properties
+    email: '',
     q1: '',
     q2: '',
     q3: '',
@@ -32,18 +32,15 @@ export class WirelessEnvironmentTest001Component {
   }
 
   submitForm() { //working
-    // Assuming your model is properly populated with user selections
-    // console.log('Submitting form:', this.model);
+    // Assuming model is properly populated with user selections    
     this.submittedw = true;
     this.start = false;
     localStorage.setItem('formSubmitted', 'true'); 
     this.auth.wirelessenvironmenttestForm(this.model).subscribe({
-      next: (response) => {
-        // console.log('Submission successful:', response);   
+      next: (response) => {        
         this.toastr.success(response.message);                
       },
-      error: (error) => {
-        // console.error('Error submitting form:', error);
+      error: (error) => {        
         this.toastr.error(error?.error.message);      
       }
     });

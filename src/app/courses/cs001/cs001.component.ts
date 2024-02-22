@@ -1248,23 +1248,7 @@ export class CS001Component {
       this.isChapter8Sub3Active = false;
       this.isChapter8Sub4Active = false;
       this.isChapter8Sub5Active = false;
-  }
-
-  CheckTest01(email: string) {
-    // this.http.post<any>('https://localhost:7243/api/CourseEnrollments', { course })
-    this.auth.test01(email)
-      .subscribe({
-        next: (response) => {
-          this.router.navigate(['courses/cs001/types-of-frauds']);
-          // Handle success (e.g., show a success message)
-        },
-        error: (error) => {
-          // console.error('Give the Test of Previous Topic', error);
-          this.toastr.error(error?.error.message);
-          // Handle error (e.g., show an error message)
-        }
-      });
-  }
+  }  
 
   CheckAttackVectorsTest001(email: string) {
     this.auth.isacttest001check(email)
