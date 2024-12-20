@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgToastModule, NgToastService, Position } from 'ng-angular-popup';
 import { ToastrService } from 'ngx-toastr';
@@ -21,6 +21,12 @@ export class SigninComponent {
   showPassword: boolean = false;
   forshowPassword: boolean = false;
 
+  email!: string;
+  otp!: string;
+  newPassword!: string;
+  showOTPInput: boolean = false;
+  otpVerified: boolean = false;  
+
   hide = true;
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private toastr: ToastrService, private userStore: UserstoreService) {
     // this.initializeForms();
@@ -28,11 +34,7 @@ export class SigninComponent {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
-    });
-    this.forgotPassword = this.fb.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required]
-    });
+    });    
   }
 
   togglePasswordVisibility() {
@@ -43,28 +45,85 @@ export class SigninComponent {
     this.forshowPassword = !this.forshowPassword;
   }
   
-  onSubmit(){
-    if(this.forgotPassword.valid){
-      // console.log(this.signupForm.value);
-      this.auth.forgot(this.forgotPassword.value)
+  // onSubmit(){
+  //   if(this.forgotPassword.valid){
+  //     // console.log(this.signupForm.value);
+  //     this.auth.forgot(this.forgotPassword.value)
+  //     .subscribe({
+  //       next:(res => {
+  //         this.toastr.success(res.message);
+  //         // alert(res.message);
+  //         this.forgotPassword.reset();
+  //         this.router.navigate(['homepage/signin']);
+  //       })
+  //       ,error:(err => {
+  //         this.toastr.error(err?.error.message);
+  //         // alert(err?.error.message)
+  //       })
+  //     })
+  //   }
+  //   else{
+  //     ValidateForm.validateAllFormFields(this.forgotPassword);
+  //     // alert("Your Form is invalid");
+  //     this.toastr.error("Your Form is invalid");
+  //   }
+  // }
+
+  onSubmit(forgotPasswordForm: NgForm){
+    if (forgotPasswordForm.invalid) {
+      // Form is invalid, do not proceed
+      return;
+    }    
+  }
+
+  sendOTP(){
+    this.showOTPInput = true;
+    this.auth.sendOTP(this.email)
       .subscribe({
-        next:(res => {
-          this.toastr.success(res.message);
-          // alert(res.message);
-          this.forgotPassword.reset();
-          this.router.navigate(['homepage/signin']);
-        })
-        ,error:(err => {
+        next: (response) => {          
+          this.toastr.success(response.message);
+        },
+        error: (err) => {          
           this.toastr.error(err?.error.message);
-          // alert(err?.error.message)
-        })
-      })
-    }
-    else{
-      ValidateForm.validateAllFormFields(this.forgotPassword);
-      // alert("Your Form is invalid");
-      this.toastr.error("Your Form is invalid");
-    }
+        }
+      });    
+  }
+
+  verifyOTP() {
+    this.showOTPInput = true;
+    this.auth.VerifyOTP(this.email, this.otp)
+      .subscribe({
+        next: (response) => {
+          this.toastr.success(response.message);
+          this.showOTPInput = false;
+          this.otpVerified= true;          
+        },
+        error: (err) => {
+          this.toastr.error(err?.error.message);
+        }
+      });      
+  }
+
+  updatePassword() {
+    this.auth.UpdatePassword(this.email, this.newPassword)
+      .subscribe({
+        next: (response) => {
+          this.toastr.success(response.message);   
+          this.closeForm();              
+        },
+        error: (err) => {
+          this.toastr.error(err?.error.message);
+        }
+      });    
+  }
+
+  closeForm() {
+    // Reset form fields and flags
+    this.email = '';
+    this.otp = '';
+    this.newPassword = '';
+    this.showOTPInput = false;
+    this.otpVerified = false;    
   }
 
   onLogin() {

@@ -165,4 +165,20 @@ export class AuthService {
   cyberstalktest001check(email: string){
     return this.http.post<any>(`${this.cyberstalkurl}/cyberstalkbullytest001?email= ${email.toString()}`, {email});
   }
+
+  sendOTP(email: string): Observable<any> {
+    const url = `https://localhost:7243/api/OTPSender/send?email=${email.toString()}`;
+    return this.http.post<any>(url, {email});
+  }
+
+  VerifyOTP(email: string, otp: string): Observable<any> {      
+    const url = `https://localhost:7243/api/OTPSender/verify?email=${email.toString()}&otp=${otp.toString()}`;
+    return this.http.post<any>(url, {email, otp});    
+  }
+
+  UpdatePassword(email: string, newPassword: string): Observable<any> {
+    const url = `https://localhost:7243/api/OTPSender/reset?email=${email.toString()}&newPassword=${newPassword.toString()}`;
+    return this.http.post<any>(url, {email, newPassword});
+  }
+
 }
