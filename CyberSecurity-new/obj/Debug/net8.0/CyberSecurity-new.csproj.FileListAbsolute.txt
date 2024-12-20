@@ -58,10 +58,14 @@ C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Deb
 C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.CyberSecurity-new.props
 C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\scopedcss\bundle\CyberSecurity-new.styles.css
-C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\CyberSecurity-new.csproj.CopyComplete
 C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\CyberSecurity-new.dll
 C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\refint\CyberSecurity-new.dll
 C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\CyberSecurity-new.pdb
 C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\CyberSecurity-new.genruntimeconfig.cache
 C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\ref\CyberSecurity-new.dll
 C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\CyberSecurity-new.sourcelink.json
+C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\bin\Debug\net8.0\CyberSecurity-new.staticwebassets.endpoints.json
+C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\staticwebassets\msbuild.CyberSecurity-new.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Akanksha Mudge\source\repos\CyberSecurity-new\CyberSecurity-new\obj\Debug\net8.0\CyberSec.EEE9AAD3.Up2Date

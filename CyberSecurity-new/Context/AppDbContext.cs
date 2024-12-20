@@ -11,6 +11,9 @@ namespace CyberSecurity_new.Context
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Department> Departments { get; set; }        
+        public DbSet<Rolemaster> rolemasters { get; set; }
+        public DbSet<LoginHistory> loginhistory { get; set; }
         public DbSet<Test01> Test01 { get; set; }
         public DbSet<IsactTest001> IsactTest001s { get; set; }
         public DbSet<AttackSurfaces> AttackSurfacesTest { get; set; }
@@ -23,10 +26,18 @@ namespace CyberSecurity_new.Context
         public DbSet<CyberStalkBullyTest001> CyberStalkBullyTest001s { get; set; }
         public DbSet<CourseEnrollment> CourseEnrollments { get; set; }
         public DbSet<CourseCompleted> courseCompleteds { get; set; }
+        public DbSet<OTPVerification> OTPVerifications { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().ToTable("users");
+            modelBuilder.Entity<User>().ToTable("users");                     
+
+            modelBuilder.Entity<Department>().ToTable("Department");                        
+
+            modelBuilder.Entity<Rolemaster>().ToTable("RoleMaster");
+
+            modelBuilder.Entity<LoginHistory>().ToTable("LoginHistory");
+
             modelBuilder.Entity<Test01>().ToTable("test01");
             modelBuilder.Entity<IsactTest001>().ToTable("isactest001");
             modelBuilder.Entity<AttackSurfaces>().ToTable("attacksurfaces");
@@ -47,6 +58,10 @@ namespace CyberSecurity_new.Context
 
             modelBuilder.Entity<CourseEnrollment>().ToTable("coursesEnrolled");
             modelBuilder.Entity<CourseCompleted>().ToTable("coursesCompleted");
+
+
+            //OTPVerification
+            modelBuilder.Entity<OTPVerification>().ToTable("otpverification");
         }
     }
 }

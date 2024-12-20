@@ -80,7 +80,7 @@ namespace CyberSecurity_new.Controllers
             var user = await _authContext.Users.FirstOrDefaultAsync(x => x.Email == userObj.Email);
 
             if (user == null )
-                return BadRequest(new { Message = "User Not Found" });
+                return BadRequest(new { Message = "User Not Found" });            
 
             if (!PasswordHasher.VerifyPassword(userObj.Password, user.Password))
             {
