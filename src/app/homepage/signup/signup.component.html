@@ -69,6 +69,15 @@
 								*ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required', 'email')">*Email
 								is required</small>
 
+							<div class="input-box select">
+								<select formControlName="deptName">
+									<option value="" disabled selected>Select Department</option>
+									<option *ngFor="let department of departments" [value]="department.deptName">{{ department.deptName }}</option>
+								</select>
+							</div>
+
+							<small class="text-danger" *ngIf="signupForm.controls['deptName'].dirty && signupForm.hasError('required', 'deptName')">*Department is required</small>						
+
 							<div class="input-box"
 								[class.error]="signupForm.controls['password'].dirty && signupForm.hasError('required', 'password')">
 								<i class="fas fa-lock"></i>
@@ -84,6 +93,31 @@
 								(change)="togglePasswordVisibility()"
 								style="margin-top: -1vh; margin-bottom: 2vh;" />
 							Show Password
+
+							<!-- <div class="select">
+								<select>
+								  <option value="1">Americano</option>
+								  <option value="2">Latte</option>
+								  <option value="3">Green Tea</option>
+								</select>
+							  </div>
+							  <div class = "down_note">
+							  <p>Coffee, at the City hall <a href="https://codepen.io/raubaca/pen/bGWmZje" target="_blank">here!</a></p>
+							</div> -->
+
+							
+							<!-- <div formGroupName="department">
+								<label for="deptName">Department Name</label>
+								<input
+								  id="deptName"
+								  formControlName="deptName"
+								  type="text"
+								  class="form-control"
+								/>
+							  </div> -->
+							  
+							
+
 							<!-- <div class="text"><a href="#">Forgot password?</a></div> -->
 							<div class="button input-box">
 								<input type="submit" (click)="onSignup()" value="Sumbit">

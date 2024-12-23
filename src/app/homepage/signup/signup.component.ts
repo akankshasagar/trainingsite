@@ -8,6 +8,7 @@ import { ToastrService } from 'ngx-toastr';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import ValidateForm from 'src/app/helpers/validateform';
 import { AuthService } from 'src/app/services/auth.service';
+import { DepartmentServiceService } from 'src/app/services/department-service.service';
 
 @Component({
   selector: 'app-signup',
@@ -19,14 +20,23 @@ export class SignupComponent {
   signupForm!: FormGroup;
   hide = true;
   showPassword: boolean = false;
+  departments: any[] = [];
   
-  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private toastr: ToastrService) {
+  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router, private toastr: ToastrService, private departmentService: DepartmentServiceService) {
     // this.initializeForms();
     this.signupForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
+      deptName: ['', Validators.required]
     })    
+  }
+
+  ngOnInit(): void {
+    this.departmentService.getDepartments().subscribe((data) => {
+      console.log(this.departments);
+      this.departments = data;
+    });
   }
 
   togglePasswordVisibility() {
@@ -35,8 +45,18 @@ export class SignupComponent {
 
   onSignup(){
     if(this.signupForm.valid){
-      // console.log(this.signupForm.value);
-      this.auth.signUp(this.signupForm.value)
+      const payload = {
+        name: this.signupForm.value.name,
+        email: this.signupForm.value.email,
+        password: this.signupForm.value.password,
+        department: {
+          deptName: this.signupForm.value.deptName
+        }
+      };
+  
+      console.log('Payload being sent:', payload); 
+
+      this.auth.signUp(payload)
       .subscribe({
         next:(res => {
           this.toastr.success(res.message);
