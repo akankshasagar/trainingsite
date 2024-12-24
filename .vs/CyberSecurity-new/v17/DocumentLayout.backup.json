@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Migrations\\20241219113521_updateusers2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CyberSecurity-new\\Migrations\\20241219113521_updateusers2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\models\\loginhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\models\\loginhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\helper\\passwordhasher2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\helper\\passwordhasher2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\models\\rolemaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\models\\rolemaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\controllers\\otpsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\otpsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\helper\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\helper\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,60 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20241219113521_updateusers2.cs",
-              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Migrations\\20241219113521_updateusers2.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Migrations\\20241219113521_updateusers2.cs",
-              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Migrations\\20241219113521_updateusers2.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Migrations\\20241219113521_updateusers2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T11:35:22.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginHistory.cs",
-              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Models\\LoginHistory.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Models\\LoginHistory.cs",
-              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Models\\LoginHistory.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Models\\LoginHistory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T11:23:39.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Rolemaster.cs",
-              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Models\\Rolemaster.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Models\\Rolemaster.cs",
-              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Models\\Rolemaster.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Models\\Rolemaster.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T10:48:36.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAAA4AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-29T03:55:56.965Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -104,47 +36,46 @@
               "RelativeDocumentMoniker": "CyberSecurity-new\\Models\\User.cs",
               "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Models\\User.cs",
               "RelativeToolTip": "CyberSecurity-new\\Models\\User.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowBcAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-29T03:43:04.049Z",
+              "WhenOpened": "2024-12-23T10:58:12.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PasswordHasher2.cs",
+              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Helper\\PasswordHasher2.cs",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\Helper\\PasswordHasher2.cs",
+              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Helper\\PasswordHasher2.cs",
+              "RelativeToolTip": "CyberSecurity-new\\Helper\\PasswordHasher2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T07:46:04.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Helper\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\Helper\\PasswordHasher.cs",
+              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Helper\\PasswordHasher.cs",
+              "RelativeToolTip": "CyberSecurity-new\\Helper\\PasswordHasher.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T07:19:44.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Controllers\\UserController.cs",
+              "RelativeToolTip": "CyberSecurity-new\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAswKkAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T05:46:15.567Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OTPSender.cs",
-              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Controllers\\OTPSender.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\OTPSender.cs",
-              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Controllers\\OTPSender.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Controllers\\OTPSender.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAYwGUAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T04:00:04.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\appsettings.json",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\appsettings.json",
-              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\appsettings.json",
-              "RelativeToolTip": "CyberSecurity-new\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2023-12-29T04:31:49.504Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Program.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Program.cs",
-              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Program.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-13T05:58:47.868Z"
             }
           ]
         },

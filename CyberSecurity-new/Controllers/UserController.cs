@@ -46,6 +46,9 @@ namespace CyberSecurity_new.Controllers
             if (userObj == null)
                 return BadRequest();
 
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             //check email
             if (await CheckEmailExistsAsync(userObj.Email))
                 return BadRequest(new { Message = "Email already Exists!" });
@@ -55,7 +58,44 @@ namespace CyberSecurity_new.Controllers
             if (!string.IsNullOrEmpty(pass))
                 return BadRequest(new { Message = pass.ToString() });
 
+            // Hash the password and get the hash and salt
+            var (passwordHash, passwordSalt) = PasswordHasher2.HashPassword(userObj.Password);
+
+            userObj.RoleId = userObj.RoleId == 0 ? 3 : userObj.RoleId;
+
+            // Handle DeptName to fetch DeptId if not provided
+            if (userObj.DeptId == 0)
+            {
+                if (string.IsNullOrEmpty(userObj.Department?.DeptName))
+                    return BadRequest(new { Message = "Either DeptId or DeptName must be provided" });
+
+                // Fetch the DeptId based on DeptName
+                var department = await _authContext.Departments
+                    .FirstOrDefaultAsync(d => d.DeptName == userObj.Department.DeptName);
+
+                if (department == null)
+                    return BadRequest(new { Message = "Invalid Department Name provided" });
+
+                // Assign the fetched DeptId
+                userObj.DeptId = department.DeptId;
+            }
+            else
+            {
+                // Validate DeptId if provided
+                var department = await _authContext.Departments
+                    .FirstOrDefaultAsync(d => d.DeptId == userObj.DeptId);
+
+                if (department == null)
+                    return BadRequest(new { Message = "Invalid Department selected" });
+            }
+
             userObj.Password = PasswordHasher.HashPassword(userObj.Password);
+            // Store the hash and salt in the database
+            userObj.Password_Hash = passwordHash;
+            userObj.Passowrd_Salt = passwordSalt;
+            userObj.CreatedDate = DateTime.UtcNow;
+            // Ensure no new Department is linked
+            userObj.Department = null;
             await _authContext.Users.AddAsync(userObj);
             await _authContext.SaveChangesAsync();
 
@@ -139,6 +179,7 @@ namespace CyberSecurity_new.Controllers
             {
                 new Claim(ClaimTypes.Name, $"{user.Name}"),
                 new Claim(ClaimTypes.Email, $"{user.Email}"),
+                new Claim(ClaimTypes.Role, $"{user.RoleId}")
             });
 
             var credentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256);

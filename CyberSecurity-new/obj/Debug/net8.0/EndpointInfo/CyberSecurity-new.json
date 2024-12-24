@@ -308,6 +308,37 @@
         }
       }
     },
+    "/api/Department/AddDept": {
+      "post": {
+        "tags": [
+          "Department"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Department"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Department"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Department"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/DnsAptAnswer001": {
       "post": {
         "tags": [
@@ -816,6 +847,37 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Rolemaster/AddRole": {
+      "post": {
+        "tags": [
+          "Rolemaster"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Rolemaster"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Rolemaster"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Rolemaster"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
@@ -1350,6 +1412,24 @@
         "type": "integer",
         "format": "int32"
       },
+      "Department": {
+        "type": "object",
+        "properties": {
+          "deptId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "deptCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "deptName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "DnsAptTest001": {
         "type": "object",
         "properties": {
@@ -1645,6 +1725,24 @@
         },
         "additionalProperties": false
       },
+      "Rolemaster": {
+        "type": "object",
+        "properties": {
+          "roleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "roleCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Test01": {
         "type": "object",
         "properties": {
@@ -1703,6 +1801,36 @@
           "password": {
             "type": "string",
             "nullable": true
+          },
+          "roleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "deptId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "login_count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "password_Hash": {
+            "type": "string",
+            "nullable": true
+          },
+          "passowrd_Salt": {
+            "type": "string",
+            "nullable": true
+          },
+          "rolemaster": {
+            "$ref": "#/components/schemas/Rolemaster"
+          },
+          "department": {
+            "$ref": "#/components/schemas/Department"
           }
         },
         "additionalProperties": false

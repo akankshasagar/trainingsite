@@ -200,6 +200,22 @@
     ]
   },
   {
+    "ContainingType": "CyberSecurity_new.Controllers.DepartmentController",
+    "Method": "AddRole",
+    "RelativePath": "api/Department/AddDept",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departmentObj",
+        "Type": "CyberSecurity_new.Models.Department",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CyberSecurity_new.Controllers.DnsAptAnswer001",
     "Method": "SubmitForm",
     "RelativePath": "api/DnsAptAnswer001",
@@ -536,6 +552,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "CyberSecurity_new.Controllers.RolemasterController",
+    "Method": "AddRole",
+    "RelativePath": "api/Rolemaster/AddRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rolemasterObj",
+        "Type": "CyberSecurity_new.Models.Rolemaster",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CyberSecurity_new.Controllers.TestAnswers01",
