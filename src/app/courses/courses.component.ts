@@ -11,8 +11,14 @@ import { HttpClient } from '@angular/common/http';
 export class CoursesComponent {
 
   start: boolean = false;
+  userRole: string | null = null;
   constructor(private auth: AuthService, private http: HttpClient) { 
 
+  }
+
+  ngOnInit(): void {
+    const tokenPayload = this.auth.decodeToken();
+    this.userRole = tokenPayload?.role || null; // Fetch user role from decoded token
   }
 
   enroll(email: string, course: string) {

@@ -8,6 +8,7 @@ export class UserstoreService {
 
   private fullName$ = new BehaviorSubject<string>("");
   private email$ = new BehaviorSubject<string>("");
+  private role$ = new BehaviorSubject<string>("");
 
   constructor() { }
 
@@ -25,5 +26,13 @@ export class UserstoreService {
 
   public setEmailForStore(email: string) {
     this.email$.next(email)
+  }
+
+  public getRoleFromStore() {
+    return this.role$.asObservable();
+  }
+
+  public setRoleForStore(role: string) {
+    this.role$.next(role)
   }
 }

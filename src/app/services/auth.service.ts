@@ -78,6 +78,11 @@ export class AuthService {
       return this.userPayload.email;
   }
 
+  getRoleFromToken() {
+    if (this.userPayload)
+      return this.userPayload.role;
+  }
+
   submitForm(formData: any): Observable<any> {
     return this.http.post(`${this.ansapiurl}`, formData);
   }

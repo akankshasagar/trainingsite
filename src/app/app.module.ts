@@ -78,6 +78,7 @@ import { IrManagementTest001Component } from './courses/cs001/ir-management/ir-m
 import { DataProtectionTest001Component } from './courses/cs001/data/data-protection-test001/data-protection-test001.component';
 import { DntAptTest001Component } from './courses/cs001/dns-and-apt-attacks/dnt-apt-test001/dnt-apt-test001.component';
 import { CyberTest001Component } from './courses/cs001/cyberstalking-and-cyberbullying/cyber-test001/cyber-test001.component';
+import { AdminpageComponent } from './adminpage/adminpage.component';
 
 @NgModule({
   declarations: [
@@ -142,7 +143,8 @@ import { CyberTest001Component } from './courses/cs001/cyberstalking-and-cyberbu
     IrManagementTest001Component,
     DataProtectionTest001Component,
     DntAptTest001Component,
-    CyberTest001Component
+    CyberTest001Component,
+    AdminpageComponent
   ],
   imports: [
     BrowserModule,

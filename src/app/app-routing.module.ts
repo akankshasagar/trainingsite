@@ -53,6 +53,7 @@ import { IrManagementTest001Component } from './courses/cs001/ir-management/ir-m
 import { DataProtectionTest001Component } from './courses/cs001/data/data-protection-test001/data-protection-test001.component';
 import { DntAptTest001Component } from './courses/cs001/dns-and-apt-attacks/dnt-apt-test001/dnt-apt-test001.component';
 import { CyberTest001Component } from './courses/cs001/cyberstalking-and-cyberbullying/cyber-test001/cyber-test001.component';
+import { AdminpageComponent } from './adminpage/adminpage.component';
 
 
 const routes: Routes = [
@@ -60,6 +61,7 @@ const routes: Routes = [
   { path: 'homepage', component: HomepageComponent },
   { path: 'homepage/signin', component: SigninComponent },
   { path: 'homepage/signup', component: SignupComponent },
+  { path: 'adminpage', component: AdminpageComponent, canActivate:[AuthGuard] },
   { path: 'courses', component: CoursesComponent, canActivate:[AuthGuard] },
   { path: 'courses/cs001', component: CS001Component, canActivate:[AuthGuard], children: [
     { path: '', pathMatch: 'full', redirectTo: 'information-security-and-cia-triad/information-security' },

@@ -136,9 +136,19 @@ export class SigninComponent {
           this.loginForm.reset();
           this.auth.storeToken(res.token); 
           const tokenPayload = this.auth.decodeToken();
+          // console.log('Decoded Token:', tokenPayload);
+          const role = tokenPayload?.role;
           this.userStore.setFullNameForStore(tokenPayload.name);
           this.toastr.success(res.message);          
-          this.router.navigate(['courses']);
+          // console.log('Role ID:', role);
+          // this.router.navigate(['courses']);
+
+          if (tokenPayload?.role !== '1') {            
+            this.router.navigate(['courses']);            
+          } else {            
+            this.router.navigate(['adminpage']);
+            // this.toastr.error('You do not have permission to access this page.');
+          }
         },
         error:(err)=>{
           this.toastr.error(err?.error.message);
