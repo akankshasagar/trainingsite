@@ -37,7 +37,18 @@ namespace CyberSecurity_new.Controllers
             {
                 return StatusCode(500, new { Message = ex.InnerException?.Message ?? ex.Message });
             }
-        }        
+        }
+
+        [HttpGet("GetDepartments")]
+        public async Task<IActionResult> GetDepartments()
+        {
+            var departments = await _authContext.Departments
+                .Select(d => new { d.DeptId, d.DeptName })
+                .ToListAsync();
+
+            return Ok(departments);
+        }
+
 
     }
 }

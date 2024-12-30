@@ -216,6 +216,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CyberSecurity_new.Controllers.DepartmentController",
+    "Method": "GetDepartments",
+    "RelativePath": "api/Department/GetDepartments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CyberSecurity_new.Controllers.DnsAptAnswer001",
     "Method": "SubmitForm",
     "RelativePath": "api/DnsAptAnswer001",
