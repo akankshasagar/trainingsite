@@ -1,30 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\",
+  "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\trainingsite\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\trainingsite\\cybersecurity-new\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\controllers\\courseenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\courseenrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\trainingsite\\cybersecurity-new\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\trainingsite\\cybersecurity-new\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\helper\\passwordhasher2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\helper\\passwordhasher2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\trainingsite\\cybersecurity-new\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\akanksha mudge\\source\\repos\\cybersecurity-new\\cybersecurity-new\\helper\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\helper\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\trainingsite\\cybersecurity-new\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|c:\\users\\user\\source\\repos\\trainingsite\\cybersecurity-new\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34DC82EF-0B50-41E9-B96E-FB1CD994730A}|CyberSecurity-new\\CyberSecurity-new.csproj|solutionrelative:cybersecurity-new\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,91 +34,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CourseEnrollmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Controllers\\CourseEnrollmentsController.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\CourseEnrollmentsController.cs",
-              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Controllers\\CourseEnrollmentsController.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Controllers\\CourseEnrollmentsController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAiwCEAAAAJAAAAAAAAAA==",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\trainingsite\\CyberSecurity-new\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\trainingsite\\CyberSecurity-new\\Controllers\\UserController.cs",
+              "RelativeToolTip": "CyberSecurity-new\\Controllers\\UserController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAwwA8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T07:15:34.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DepartmentController.cs",
-              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Controllers\\DepartmentController.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\DepartmentController.cs",
-              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Controllers\\DepartmentController.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Controllers\\DepartmentController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAgwBoAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T12:16:15.276Z",
+              "WhenOpened": "2024-12-31T10:00:36.263Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Models\\User.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Models\\User.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Models\\User.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBAAAAAZAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\trainingsite\\CyberSecurity-new\\Program.cs",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\Program.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\trainingsite\\CyberSecurity-new\\Program.cs",
+              "RelativeToolTip": "CyberSecurity-new\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T10:58:12.366Z"
+              "WhenOpened": "2024-12-31T09:47:22.572Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "PasswordHasher2.cs",
-              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Helper\\PasswordHasher2.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Helper\\PasswordHasher2.cs",
-              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Helper\\PasswordHasher2.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Helper\\PasswordHasher2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T07:46:04.606Z"
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\trainingsite\\CyberSecurity-new\\appsettings.json",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\appsettings.json",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\trainingsite\\CyberSecurity-new\\appsettings.json",
+              "RelativeToolTip": "CyberSecurity-new\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-31T09:40:13.613Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PasswordHasher.cs",
-              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Helper\\PasswordHasher.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Helper\\PasswordHasher.cs",
-              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Helper\\PasswordHasher.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Helper\\PasswordHasher.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CoursesController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\trainingsite\\CyberSecurity-new\\Controllers\\CoursesController.cs",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\CoursesController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\trainingsite\\CyberSecurity-new\\Controllers\\CoursesController.cs",
+              "RelativeToolTip": "CyberSecurity-new\\Controllers\\CoursesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T07:19:44.982Z"
+              "WhenOpened": "2024-12-31T09:33:37.65Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "CyberSecurity-new\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Akanksha Mudge\\source\\repos\\CyberSecurity-new\\CyberSecurity-new\\Controllers\\UserController.cs",
-              "RelativeToolTip": "CyberSecurity-new\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAkwKkAAABGAAAAAAAAAA==",
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\trainingsite\\CyberSecurity-new\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\trainingsite\\CyberSecurity-new\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "CyberSecurity-new\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACcAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T05:46:15.567Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
+              "WhenOpened": "2024-12-31T08:58:14.875Z",
+              "EditorCaption": ""
+            },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\trainingsite\\CyberSecurity-new\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "CyberSecurity-new\\Models\\Course.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\trainingsite\\CyberSecurity-new\\Models\\Course.cs",
+              "RelativeToolTip": "CyberSecurity-new\\Models\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T08:57:17.841Z",
+              "EditorCaption": ""
             }
           ]
         }
