@@ -54,6 +54,8 @@ import { DataProtectionTest001Component } from './courses/cs001/data/data-protec
 import { DntAptTest001Component } from './courses/cs001/dns-and-apt-attacks/dnt-apt-test001/dnt-apt-test001.component';
 import { CyberTest001Component } from './courses/cs001/cyberstalking-and-cyberbullying/cyber-test001/cyber-test001.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
+import { EditcourseComponent } from './adminpage/editcourse/editcourse.component';
+import { AddcourseComponent } from './adminpage/addcourse/addcourse.component';
 
 
 const routes: Routes = [
@@ -62,6 +64,11 @@ const routes: Routes = [
   { path: 'homepage/signin', component: SigninComponent },
   { path: 'homepage/signup', component: SignupComponent },
   { path: 'adminpage', component: AdminpageComponent, canActivate:[AuthGuard] },
+  { path: 'adminpage/editcourse', component: EditcourseComponent, canActivate: [AuthGuard] },
+  { path: 'adminpage/addcourse', component: AddcourseComponent, canActivate: [AuthGuard] },
+    // { path: '', pathMatch: 'full', redirectTo: 'editcourse' },
+
+    // { path: 'editcourse', component: EditcourseComponent }},
   { path: 'courses', component: CoursesComponent, canActivate:[AuthGuard] },
   { path: 'courses/cs001', component: CS001Component, canActivate:[AuthGuard], children: [
     { path: '', pathMatch: 'full', redirectTo: 'information-security-and-cia-triad/information-security' },

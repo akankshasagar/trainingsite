@@ -10,7 +10,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a class="nav-item nav-link" href="homepage">Home</a>
+            <a class="nav-item nav-link" href="adminpage">Home</a>
             <!-- <a class="nav-item nav-link">About</a> -->
             <a class="nav-item nav-link active" href="courses">Courses</a>
             <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
@@ -22,17 +22,65 @@
 <!-- Navbar End -->
 
 
-<div class="mb-24pt mb-sm-0 mr-sm-24pt">
-        <h1 class="mb-0 h2">Manage Courses</h1> 
-        <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item">
-                <a href="/" class="active" target="_self">Home</a>
-            </li>
-            <li class="breadcrumb-item active">
-                <span aria-current="location">Manage Courses</span>
-            </li>
-        </ol>
+<!-- Courses Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
+            <h1 class="mb-5">Courses Available</h1>
+        </div>
+        <a class="btn btn-primary py-3 px-5 mt-2" href="adminpage/addcourse">Add Course</a>
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="../../assets/img2/course-1.jpeg" alt="">
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">                            
+                            <!-- <a (click)="Start()" class="flex-shrink-0 btn btn-sm btn-primary px-5"
+                                style="border-radius: 30PX 30px 30px 30px;">Start Now</a> -->
+                            <a (click)="Start()" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Start Now</a>
+                            <a href="adminpage/editcourse" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Edit</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">                        
+                        <h5 class="mb-4">ADVANCED CYBER THREATS In DIGITAL ERA</h5>
+                    </div>
+                    <div class="d-flex border-top">                        
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
 </div>
+<!-- Courses End -->
+
+<!---Course About starts-->
+<div class="container-fluid py-5 justify-content-center align-items-center modal-open" *ngIf="start">
+    <div class="container">
+        <div class="card shadow">
+            <div class="card-body" style="max-height: 80vh; overflow-y: auto;">
+            <div class="row gx-0">
+                <div class="col-lg-6 order-lg-1 wow" data-wow-delay="0.1s">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="../../assets/img2/course-1.jpeg" alt="" >
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 wow" data-wow-delay="0.3s">
+                    <div class="card-body">                        
+                        <h1 class="mb-4">ADVANCED CYBER THREATS In DIGITAL ERA</h1>
+                        <p class="mb-4">Cybersecurity education should be accessible to everyone.</p>
+                        <p class="mb-4">Threats have the potential to steal or damage data, disrupt business, or create harm in general. It refers to the sophisticated and evolving cybersecurity challenges that arise in the modern digital age. As technology advances and becomes more integrated into various aspects of daily life and business operations, the threat landscape also becomes increasingly complex and diverse.</p>                        
+                        <a class="btn btn-primary py-3 px-5 mt-2 d-block d-lg-inline-block" href="courses/cs001" (click)="enroll('','Enrolled in ADVANCED CYBER THREATS In DIGITAL ERA')">Start Now</a>
+                        <button type="button" class="btn-close position-absolute top-0 end-0 mt-3 me-3 d-lg-block" aria-label="Close" (click)="closeCard()"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+    
+<!--Course About Ends-->
 
 </div>
 

@@ -79,6 +79,8 @@ import { DataProtectionTest001Component } from './courses/cs001/data/data-protec
 import { DntAptTest001Component } from './courses/cs001/dns-and-apt-attacks/dnt-apt-test001/dnt-apt-test001.component';
 import { CyberTest001Component } from './courses/cs001/cyberstalking-and-cyberbullying/cyber-test001/cyber-test001.component';
 import { AdminpageComponent } from './adminpage/adminpage.component';
+import { EditcourseComponent } from './adminpage/editcourse/editcourse.component';
+import { AddcourseComponent } from './adminpage/addcourse/addcourse.component';
 
 @NgModule({
   declarations: [
@@ -144,7 +146,9 @@ import { AdminpageComponent } from './adminpage/adminpage.component';
     DataProtectionTest001Component,
     DntAptTest001Component,
     CyberTest001Component,
-    AdminpageComponent
+    AdminpageComponent,
+    EditcourseComponent,
+    AddcourseComponent
   ],
   imports: [
     BrowserModule,

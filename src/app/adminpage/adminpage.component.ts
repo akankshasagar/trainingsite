@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AdminpageComponent {
 
+  start: boolean = false;
   userRole: string | null = null;
   constructor(private auth: AuthService, private http: HttpClient) { 
   
@@ -21,6 +22,26 @@ export class AdminpageComponent {
   
   logout() {
     this.auth.signOut();
+  }
+
+  enroll(email: string, course: string) {
+    this.auth.enroll(email, course)
+      .subscribe({
+        next: (response)  => {
+          console.log('Enrollment successful', response);
+        },
+        error: (error) => {
+          console.error('Error occurred during enrollment', error);
+        }
+      });
+  }
+
+  Start(){
+    this.start = true;
+  }
+
+  closeCard() {
+    this.start = false;
   }
 
 }
